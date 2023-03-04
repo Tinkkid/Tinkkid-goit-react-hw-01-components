@@ -1,10 +1,10 @@
 import styled from '@emotion/styled';
 
 export const ProfileWrap = styled.div`
-  background-color: white;
+  background-color: ${props => props.theme.color.white};
   width: fit-content;
   margin-bottom: 50px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  box-shadow: ${p => p.theme.color.boxShadow};
 `;
 
 export const ProfileInfo = styled.div`
@@ -26,19 +26,20 @@ export const AvatarName = styled.p`
 export const AvatarText = styled.p`
   margin: 5px auto;
   font-size: 16px;
-  color: #212121;
+  color: ${props => props.theme.color.avatarText};
   text-align: center;
 `;
 
 export const StatisticList = styled.ul`
   display: grid;
-   grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
-  background-color: #212121;
+  background-color: ${props => props.theme.color.avatarText};
 `;
 
 export const StatisticItem = styled.li`
-  border-right: 2px solid white;
+  border-right: ${props => `1px solid ${props.theme.color.white}`};
+  color: ${props => props.theme.color.white};
   text-align: center;
   padding: 24px;
   display: flex;
@@ -46,11 +47,9 @@ export const StatisticItem = styled.li`
 `;
 
 export const StatisticName = styled.span`
-  color: white;
   font-weight: bold;
   margin-bottom: 5px;
 `;
 
 export const StatisticData = styled.span`
-  color: white;
 `;

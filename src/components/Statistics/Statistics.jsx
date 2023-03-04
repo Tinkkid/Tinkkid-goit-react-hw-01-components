@@ -7,7 +7,7 @@ export const Statistics = ({ title, stats }) => {
       {title && <Title>{title}</Title>}
       <List>
         {stats.map(({ id, label, percentage }) => (
-          <Item key={id}>
+          <Item key={id} label={label}>
             <LabelName>{label}</LabelName>
             <Value>{percentage}%</Value>
           </Item>
